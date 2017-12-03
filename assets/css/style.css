@@ -2,8 +2,13 @@ body {
     padding: 4% 0 6% 0;
 }
 
-.filter-head {
+.filter-block {
+    padding: 2%;
+    border: 1px solid #ccc;
+}
+.product-filter {
     border-bottom: 1px solid #666;
+    padding-bottom: 1%;
 }
 
 #product-grid-head {

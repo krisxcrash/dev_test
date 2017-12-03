@@ -1,6 +1,3 @@
-var topics = [];
-//runs when the page is ready
-
 
 var queryURL = "https://www.wirelessemporium.com/products.json";
 $.ajax({
@@ -20,7 +17,6 @@ $.ajax({
             for (let j = 0; j < productVariant.length; j++) {
                 const variants = productVariant[j];
             }
-            console.log(productType)
                 var cat = $("<p class='cat'>").text(productType);
                 var h4 = $("<h4 class='product-info'>")
                 .text(description);
@@ -42,19 +38,30 @@ $.ajax({
 		};
     });
 
-$(document).on('click', '#searchButton', function() {
-    var title = "11384648583";
-    var queryURL = "https://www.wirelessemporium.com/products.json";
-    $.ajax({
-            url: queryURL,
-            method: "GET"
-        })
-        .done(function(response) {
-            console.log(response);
-            console.log(response.products[0].id);
-            var results = response.products;
-            for (var i = 0; i < results.length; i++) {
-            }
+
+$(document).on("click", ".product-list", function() {
+    var catFilter = $(this).value;
+
+    $("#resultsHere").addClass("hidden");
+
+    
 
 })
-});
+    // var queryURL = "https://www.wirelessemporium.com/products.json";
+    // $.ajax({
+    //         url: queryURL,
+    //         method: "GET"
+    //     })
+    //     .done(function(response) {
+    //         console.log(response);
+    //         console.log(response.products[0].id);
+    //         var results = response.products;
+    //         for (var i = 0; i < results.length; i++) {
+    //             var productsDiv = $("<div class='item col-md-6 col-sm-6 col-xs-12 squares'>");
+    //             var description = results[i].title;
+    //             var productType = results[i].product_type;
+    //             var productVariant = results[i].variants;
+    
+    //             for (let j = 0; j < productVariant.length; j++) {
+    //                 const variants = productVariant[j];
+    //             }
