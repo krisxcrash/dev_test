@@ -3,7 +3,9 @@ body {
 }
 .filter-block {
 	padding: 2%;
-	border: 1px solid #ccc;
+    border: 1px solid #ccc;
+    height: 100%;
+    
 }
 .product-filter {
 	border-bottom: 1px solid #666;
@@ -18,7 +20,7 @@ body {
 	width: 90%;
 	align-content: center;
 	margin: 2% 5% 8% 5%;
-	float: left;
+	float: right;
 }
 .products-image {
 	align-content: center;
@@ -26,8 +28,9 @@ body {
 }
 .product-info {
 	width: 400px;
-	text-align: left;
+    text-align: left;
 }
+
 #product-list {
 	list-style: none;
 }
