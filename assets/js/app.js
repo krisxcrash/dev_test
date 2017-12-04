@@ -147,8 +147,6 @@ function newProductList() {
                                 productType: results[ i ].product_type,
                                 parentId: results[ i ].id,
                             };
-
-                            console.log(product);
                             
                             var productVariant= results[ i ].variants;
                                 for ( var j = 0; j < productVariant.length; j++ ) {
@@ -159,13 +157,15 @@ function newProductList() {
                                     available: variants.available,
                                     moboPrice: variants.price,
                                     comparePrice: variants.compare_at_price,
-                                    childId: variants.childid,
+                                    childId: variants.id,
                                     childImage: variants.src
                                 }
-                                
-                            }
 
+                            }
+                            listProducts.push(product,variantOfProduct);
                         }
+                        
+                        console.log(listProducts)
                     });
             
         }
