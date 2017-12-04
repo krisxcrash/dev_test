@@ -20,6 +20,8 @@ $.ajax({
             }
 
             console.log(variants);
+            console.log("objects: " + variants.sku + "\n" + variants.compare_at_price + "\n" + variants.price + "\n");
+
                 var cat = $("<p class='cat'>").text(productType);
                 var h4 = $("<h4 class='product-info'>")
                 .text(description);
@@ -74,7 +76,6 @@ var categoryList = ["Cases & Covers",
         var filterList = $(this).attr("value");
         
         console.log(filterList);
-        $("#filter-results").text("hola");
 
                 var queryURL = "https://www.wirelessemporium.com/products.json";
                 $.ajax({
@@ -94,7 +95,7 @@ var categoryList = ["Cases & Covers",
                                 var variants = productVariant[j];
                             }
             
-                            if (filterList.value === productType[i]) {
+                            if (filterList === productType) {
 
                                 
                                 var cat = $("<p class='cat'>").text(productType);
@@ -115,20 +116,12 @@ var categoryList = ["Cases & Covers",
                                     .prepend(productsDiv);
                             }
                                 
-                
+                            $("#resultsHere").addClass("hidden");
+                            $("#filter-results").removeClass("hidden");
                 
                         };
 
-                        $("#resultsHere").addClass("hidden");
-                        $("#filter-results").removeClass("hidden");
+                        
                     });
     })
 };
-
-function sortPrice() {
-    var res = $.grep(data.items, function(v) {
-        return name.indexOf(v.Name) > -1; //return all columns contained in the list that are also in the name array
-      });
-      
-      document.write('<pre>' + JSON.stringify(res, 0, 3) + '</pre>');
-}
