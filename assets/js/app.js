@@ -115,20 +115,6 @@ function categoryFilter() {
 };
 
 
-
-// function sortResults(prop, asc) {
-//     people = people.sort(function(a, b) {
-//         if (asc) {
-//             return (a[prop] > b[prop]) ? 1 : ((a[prop] < b[prop]) ? -1 : 0);
-//         } else {
-//             return (b[prop] > a[prop]) ? 1 : ((b[prop] < a[prop]) ? -1 : 0);
-//         }
-//     });
-//     showResults();
-// }
-
-
-
 function newProductList() {
     var listProducts = [];
 
@@ -165,11 +151,28 @@ function newProductList() {
                             listProducts.push(product,variantOfProduct);
                         }
                         
-                        console.log(listProducts)
+                    
                     });
             
         }
 
+$("#price-sort").on("click", function() {
+    $( "#filter-results" ).empty(); //clears results from previous click
 
+    event.preventDefault(); //prevents window from reloading on click
+    var priceSort = $( this )
+        .attr( "value" );
+
+        function sortResults(prop, asc) {
+            listProducts = priceSort.sort(function(a, b) {
+                if (asc) {
+                    return (a[prop] > b[prop]) ? 1 : ((a[prop] < b[prop]) ? -1 : 0);
+                } else {
+                    return (b[prop] > a[prop]) ? 1 : ((b[prop] < a[prop]) ? -1 : 0);
+                }
+            });
+}
+
+})
 
 newProductList();
