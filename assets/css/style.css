@@ -1,5 +1,5 @@
 body {
-    padding: 4% 0 6% 0;
+    padding: 4% 0 8% 0;
 }
 
 .filter-block {
@@ -20,7 +20,7 @@ body {
 .product-container {
     width: 90%;
     align-content: center;
-    margin: 2% 5%;
+    margin: 2% 5% 8% 5%;
     float: left;
 }
 
@@ -34,7 +34,7 @@ body {
     text-align: left;
 }
 
-li .cat-list {
+ul #product-list {
     list-style: none;
 }
 
@@ -45,6 +45,3 @@ li .cat-list {
     color: #666;
 }
 
-.footer {
-    margin-top: 4em;
-}
