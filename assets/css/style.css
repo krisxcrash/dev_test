@@ -34,7 +34,11 @@ body {
     text-align: left;
 }
 
-ul #product-list {
+#product-list {
+    list-style: none;
+}
+
+#price-sort {
     list-style: none;
 }
 
