@@ -34,7 +34,7 @@ body {
     text-align: left;
 }
 
-.product-list li {
+li .cat-list {
     list-style: none;
 }
 
