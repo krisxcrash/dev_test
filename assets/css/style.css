@@ -37,7 +37,7 @@ li {
 #product-list {
 	list-style: none;
 }
-#price-sort {
+.price-sort {
 	list-style: none;
 }
 .cat {
