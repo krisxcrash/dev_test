@@ -5,7 +5,10 @@ body {
 	padding: 2%;
     border: 1px solid #ccc;
     height: 100%;
-    
+}
+
+li {
+    cursor: pointer;
 }
 .product-filter {
 	border-bottom: 1px solid #666;
