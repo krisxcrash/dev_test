@@ -119,7 +119,6 @@ function sortByPrice () {
 
         console.log(priceSort)
 
-            console.log("1st click works")
 
             // if (priceSort === "asc") {
             //     console.log("ascending")
@@ -139,11 +138,6 @@ function sortByPrice () {
 			var results = response.products;
 
 			for ( var i = 0; i < results.length; i++ ) {
-
-                // var productsDiv = $( "<div class='item col-md-6 col-sm-6 col-xs-12 squares clearfix'>" );
-                // var description = results[ i ].title;
-                // var productType = results[ i ].product_type;
-                // var productVariant = results[ i ].variants;
 
 				var product = {
 					description: results[ i ].title,
@@ -169,22 +163,17 @@ function sortByPrice () {
             jQuery.extend(product, variantOfProduct)
             listProducts.push( product );
 
-                //     var cat = $( "<p class='cat'>" )
-                //     .text( productType );
-                // var h4 = $( "<h4 class='product-info'>" )
-                //     .text( description );
-                    
-                //     var productImage = $( "<img>" );
-                //     productImage.attr( "src", results[ i ].images[ 0 ].src );
-                //     productImage.attr( "height", "400" );
-                //     productImage.attr( "width", "400" )
-                //     productImage.addClass( "products-image" );
-                //     productsDiv.prepend( h4 );
-                //     productsDiv.prepend( cat );
-                //     productsDiv.prepend( productImage );
-                //     $( "#filter-results" )
-                //         .prepend( productsDiv );
                 }
+
+                
+
+                    listProducts.sort(function(a, b) {
+                        return parseFloat(a.moboPrice) - parseFloat(b.moboPrice);
+                    });
+                
+
+
+
                 $( "#resultsHere" )
                     .addClass( "hidden" ); //hides the product results
                 $( "#filter-results" )
